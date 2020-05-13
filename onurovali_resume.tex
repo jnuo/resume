@@ -1,10 +1,32 @@
 \documentclass[11pt,twoside,a4paper]{article}
 
-\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{lipsum}
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1} %
+}
+
+\usepackage{enumitem}
+
+\usepackage{geometry}
+
+\newgeometry{vmargin={15mm}, hmargin={15mm}}   % set the margins
+
+\renewcommand{\familydefault}{\sfdefault} % change font
 \setcounter{secnumdepth}{0}
 
-\title{Resume of Onur Ovalı}
-\author{Onur Ovalı}
+\makeatletter
+\renewcommand\maketitle
+  {\noindent
+   {\Large\bfseries\@title}%
+   \medskip\par\noindent
+   {\large\bfseries\@author}%
+   \hfill
+   {\large\@date}%
+   \bigskip\par\noindent
+  }
+
+\title{Onur Ovalı}
+\author{linkedin.com/in/onur-ovali}
 \date{\today}
 
 \begin{document}
@@ -12,8 +34,16 @@
   \maketitle
 
   \section{Education}
-    \subsection{Koç University}
-    \subsection{Middle East Technical University}
+    \subsection{\noindent\textbox{MBA\hfill}\textbox{\hfil Koç University, Istanbul\hfil}\textbox{\hfill Sep 2015 - Dec 2017}}
+      $\bullet$ General MBA Program with a focus on product management, entrepreneurship \& marketing.\\
+      $\bullet$ International attendance:\\
+        \indent{\textsection{ IE Business School, Madrid, Spain: Sales \& Marketing (Erasmus Program)\hfill Aug-Dec 2017}}\\
+        \indent{\textsection{ Hitotsubashi ICS, Tokyo, Japan: Innovation X Globalisation: Japan Style\hfill Mar 2017}}\\
+        \indent{\textsection{ IE Business School, Madrid, Spain: High Tech Entrepreneurship (online course)\hfill Jan-Mar 2017}}\\
+        \indent{\textsection{ Yale SOM, New Haven, USA: Behavioral Economis, Marketing \& Finance\hfill Oct 2016}}
+
+    \subsection{\noindent\textbox{BSc in Computer Engineering\hfill}\textbox{\hfil METU, Ankara\hfil}\textbox{\hfill Sep 2005 - Jul 2010}}
+      $\bullet$ Bachelor's Degree on Computer Science Program.\\
 
   \section{Employment}
     \subsection{Kariyer}
@@ -22,7 +52,7 @@
     \subsection{Is Bankasi}
 
   \section{Certifications}
-  Blah.
+  Blah
 
   \section{Skills, Knowledge \& Tools}
   Blah.
